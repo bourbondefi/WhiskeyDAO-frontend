@@ -211,24 +211,9 @@ function App() {
 
           <div className={`${path === "/" ? null : classes.content} ${isSmallerScreen && classes.contentShift}`}>
             <Switch>
-              <Route exact path="/dashboard">
-                <TreasuryDashboard />
-              </Route> 
-              <Route path="/stake">
-                <Stake />
-              </Route>
-              <Route exact path="/home">
-                <Redirect to="/" />
-              </Route>
-              <Route exact path="/">
-                <Home />
-              </Route>
-             {/* <Route path="/33-together">
-                <PoolTogether />
-              </Route>
-              <Route path="/nft">
-                <NFTPage />
-              </Route> */}
+              <Route exact path="/dashboard" component={TreasuryDashboard} />
+              <Route path="/stake" component={Stake} />
+              <Route exact path="/" component={Home} />
               <Route path="/bonds">
                 {bonds.map(bond => {
                   return (
