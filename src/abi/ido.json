@@ -111,11 +111,11 @@
 	  "inputs": [
 	    {
 	      "internalType": "address",
-	      "name": "_pid",
+	      "name": "_WHISKEY",
 	      "type": "address"
 	    }
 	  ],
-	  "name": "setPID",
+	  "name": "setWHISKEY",
 	  "outputs": [],
 	  "stateMutability": "nonpayable",
 	  "type": "function"
@@ -230,7 +230,7 @@
   },
   {
     "inputs": [],
-    "name": "PID",
+    "name": "WHISKEY",
     "outputs": [
       {
         "internalType": "address",

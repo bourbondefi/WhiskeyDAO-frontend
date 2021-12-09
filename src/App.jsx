@@ -213,7 +213,7 @@ function App() {
             <Switch>
               <Route exact path="/dashboard">
                 <TreasuryDashboard />
-              </Route>
+              </Route> 
               <Route path="/stake">
                 <Stake />
               </Route>
@@ -223,12 +223,12 @@ function App() {
               <Route exact path="/">
                 <Home />
               </Route>
-              <Route path="/33-together">
+             {/* <Route path="/33-together">
                 <PoolTogether />
               </Route>
               <Route path="/nft">
                 <NFTPage />
-              </Route>
+              </Route> */}
               <Route path="/bonds">
                 {bonds.map(bond => {
                   return (

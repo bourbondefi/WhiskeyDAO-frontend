@@ -33,7 +33,7 @@ export const dai = new StableBond({
   bondContractABI: DaiBondContract,
   networkAddrs: {
     [NetworkID.Mainnet]: {
-      bondAddress: "0xF46764743fF3d9B29CD6Cdb1D692221e32ef42e5",
+      bondAddress: "0x8A8dD632f9461138CAA15f57d0F107eFFa38dD47",
       reserveAddress: addresses[NetworkID.Mainnet].DAI_ADDRESS,
     },
     [NetworkID.Testnet]: {
@@ -51,8 +51,8 @@ export const eth = new CustomBond({
   bondContractABI: EthBondContract,
   networkAddrs: {
     [NetworkID.Mainnet]: {
-      bondAddress: "0x87214cf488157eBD0eA93AEd2eFA2bb4493D34B9",
-      reserveAddress: "0x250632378e573c6be1ac2f97fcdf00515d0aa91b",
+      bondAddress: "0x9A2E559bBe717497dD2cE9d83A463dcF7ea11790",
+      reserveAddress: addresses[NetworkID.Mainnet].BNB_ADDRESS,
     },
     [NetworkID.Testnet]: {
       bondAddress: "0xca7b90f8158A4FAA606952c023596EE6d322bcf0",
@@ -71,16 +71,16 @@ export const eth = new CustomBond({
 });
 
 export const ohm_dai = new LPBond({
-  name: "PID-BUSD",
-  displayName: "PID-BUSD LP",
+  name: "WHISKEY-BUSD",
+  displayName: "WHISKEY-BUSD LP",
   bondToken: "PID-BUSD",
   bondIconSvg: OhmDaiImg,
   bondContractABI: BondOhmDaiContract,
   reserveContract: ReserveOhmDaiContract,
   networkAddrs: {
     [NetworkID.Mainnet]: {
-      bondAddress: "0x20A633EF2b83bc5912e1b97ba94865B29816BE53",
-      reserveAddress: "0x3991e0988A69E4C8Fde46C011Dafe55E26fdD18D",
+      bondAddress: "0x7F1b0Dab5C7c8d7a63758946f853049bC53f4306",
+      reserveAddress: "0x96b6d5482313eECC031aFEb2Fb32da2BA7439BA2",
     },
     [NetworkID.Testnet]: {
       bondAddress: "0xcF449dA417cC36009a1C6FbA78918c31594B9377",
@@ -177,7 +177,7 @@ export const pid_lusd = new LPBond({
 // Add new bonds to this array!!
 // export const allBonds = [dai, frax, eth, ohm_dai, ohm_frax, lusd, pid_lusd];
 
-export const allBonds = [dai,ohm_dai]
+export const allBonds = [dai,ohm_dai,eth]
 // export const allBonds:LPBond[]=[]
 export const treasuryBalanceAll = async ( networkID: NetworkID, provider: StaticJsonRpcProvider) => {
   return (await Promise.all(allBonds.map(async (item) => {

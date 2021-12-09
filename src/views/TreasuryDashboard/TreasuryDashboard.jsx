@@ -68,7 +68,7 @@ function TreasuryDashboard() {
     //   setData(metrics);
 
     //   let staked = r.data.protocolMetrics.map(entry => ({
-    //     staked: (parseFloat(entry.sOhmCirculatingSupply) / parseFloat(entry.PIDCirculatingSupply)) * 100,
+    //     staked: (parseFloat(entry.sOhmCirculatingSupply) / parseFloat(entry.WHISKEYCirculatingSupply)) * 100,
     //     timestamp: entry.timestamp,
     //   }));
     //   staked = staked.filter(pm => pm.staked < 100);
@@ -120,7 +120,7 @@ function TreasuryDashboard() {
                   wsOHM Price
                   <InfoTooltip
                     message={
-                      "wsOHM = sPID * index\n\nThe price of wsOHM is equal to the price of OHM multiplied by the current index"
+                      "wsOHM = SCREWBALL * index\n\nThe price of wsOHM is equal to the price of OHM multiplied by the current index"
                     }
                   />
                 </Typography>
@@ -157,12 +157,12 @@ function TreasuryDashboard() {
                   Current Index
                   <InfoTooltip
                     message={
-                      "The current index tracks the amount of sPID accumulated since the beginning of staking. Basically, how much sPID one would have if they staked and held a single OHM from day 1."
+                      "The current index tracks the amount of SCREWBALL accumulated since the beginning of staking. Basically, how much SCREWBALL one would have if they staked and held a single OHM from day 1."
                     }
                   />
                 </Typography>
                 <Typography variant="h5">
-                  {currentIndex ? trim(currentIndex, 2) + " sPID" : <Skeleton type="text" />}
+                  {currentIndex ? trim(currentIndex, 2) + " SCREWBALL" : <Skeleton type="text" />}
                 </Typography>
               </Box>
             </Box>
@@ -174,7 +174,7 @@ function TreasuryDashboard() {
             <Grid item lg={6} md={6} sm={12} xs={12}>
               <Paper className="ohm-card">
                   <Typography variant="h6" color="textSecondary">
-                    PID Price
+                    WHISKEY Price
                   </Typography>
                   <Typography variant="h5">
                     {/* appleseed-fix */}
@@ -202,12 +202,12 @@ function TreasuryDashboard() {
                     Current Index
                     <InfoTooltip
                       message={
-                        "The current index tracks the amount of sPID accumulated since the beginning of staking. Basically, how much sPID one would have if they staked and held a single PID from day 1."
+                        "The current index tracks the amount of SCREWBALL accumulated since the beginning of staking. Basically, how much SCREWBALL one would have if they staked and held a single WHISKEY from day 1."
                       }
                     />
                   </Typography>
                   <Typography variant="h5">
-                    {currentIndex ? trim(currentIndex, 2) + " sPID" : <Skeleton type="text" />}
+                    {currentIndex ? trim(currentIndex, 2) + " SCREWBALL" : <Skeleton type="text" />}
                   </Typography>
                   {/* <Chart
                     type="stack"
@@ -309,7 +309,7 @@ function TreasuryDashboard() {
             <Grid item lg={6} md={6} sm={12} xs={12}>
               <Paper className="ohm-card">
                 <Typography variant="h6" color="textSecondary">
-                  Backing per PID
+                  Backing per WHISKEY
                 </Typography>
                 <Typography variant="h5">
                   {backingPerOhm ? formatCurrency(backingPerOhm, 2) : <Skeleton type="text" />}
@@ -361,7 +361,7 @@ function TreasuryDashboard() {
             <Grid item lg={6} md={6} sm={12} xs={12}>
               <Paper className="ohm-card">
                 <Typography variant="h6" color="textSecondary">
-                PID Staked
+                WHISKEY Staked
                   </Typography>
                   <Typography variant="h5">
                     {staked ? `${trim(staked, 2)}%` : <Skeleton type="text" />}

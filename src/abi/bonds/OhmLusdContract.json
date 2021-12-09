@@ -4,7 +4,7 @@
         "inputs": [
             {
                 "internalType": "address",
-                "name": "_PID",
+                "name": "_WHISKEY",
                 "type": "address"
             },
             {
@@ -196,7 +196,7 @@
     },
     {
         "inputs": [],
-        "name": "PID",
+        "name": "WHISKEY",
         "outputs": [
             {
                 "internalType": "address",

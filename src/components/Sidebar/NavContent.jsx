@@ -122,7 +122,7 @@ function NavContent() {
               </ANavLink>
               
 
-              <ANavLink
+             {/* <ANavLink
                 component={NavLink}
                 id="33-together-nav"
                 to="/33-together"
@@ -151,7 +151,7 @@ function NavContent() {
                   <ANavIcon bg1={NFTimg} />
                   PINFT
                 </Typography>
-              </ANavLink>
+              </ANavLink> */}
               <ANavLink
                 component={NavLink}
                 id="bond-nav"

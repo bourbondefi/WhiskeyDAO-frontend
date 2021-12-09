@@ -1,13 +1,13 @@
 {
   "abi": [
     {
-      "inputs": [{ "internalType": "address", "name": "_PID", "type": "address" }],
+      "inputs": [{ "internalType": "address", "name": "_WHISKEY", "type": "address" }],
       "stateMutability": "nonpayable",
       "type": "constructor"
     },
     {
       "inputs": [],
-      "name": "PID",
+      "name": "WHISKEY",
       "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
       "stateMutability": "view",
       "type": "function"

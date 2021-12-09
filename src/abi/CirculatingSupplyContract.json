@@ -7,27 +7,27 @@
     },
     {
       "inputs": [],
-      "name": "PID",
+      "name": "WHISKEY",
       "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
       "stateMutability": "view",
       "type": "function"
     },
     {
       "inputs": [],
-      "name": "PIDCirculatingSupply",
+      "name": "WHISKEYCirculatingSupply",
       "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
       "stateMutability": "view",
       "type": "function"
     },
     {
       "inputs": [],
-      "name": "getNonCirculatingPID",
+      "name": "getNonCirculatingWHISKEY",
       "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
       "stateMutability": "view",
       "type": "function"
     },
     {
-      "inputs": [{ "internalType": "address", "name": "_PID", "type": "address" }],
+      "inputs": [{ "internalType": "address", "name": "_WHISKEY", "type": "address" }],
       "name": "initialize",
       "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
       "stateMutability": "nonpayable",
@@ -42,7 +42,7 @@
     },
     {
       "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-      "name": "nonCirculatingPIDAddresses",
+      "name": "nonCirculatingWHISKEYAddresses",
       "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
       "stateMutability": "view",
       "type": "function"
@@ -56,7 +56,7 @@
     },
     {
       "inputs": [{ "internalType": "address[]", "name": "_nonCirculatingAddresses", "type": "address[]" }],
-      "name": "setNonCirculatingPIDAddresses",
+      "name": "setNonCirculatingWHISKEYAddresses",
       "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
       "stateMutability": "nonpayable",
       "type": "function"

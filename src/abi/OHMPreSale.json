@@ -1,7 +1,7 @@
 {
   "_format": "hh-sol-artifact-1",
-  "contractName": "PIDPreSale",
-  "sourceName": "contracts/sale/olympus/presale/PIDPresale.sol",
+  "contractName": "WHISKEYPreSale",
+  "sourceName": "contracts/sale/olympus/presale/WHISKEYPresale.sol",
   "abi": [
     {
       "inputs": [
@@ -48,7 +48,7 @@
     },
     {
       "inputs": [],
-      "name": "aPID",
+      "name": "aWHISKEY",
       "outputs": [
         {
           "internalType": "address",
@@ -126,7 +126,7 @@
         },
         {
           "internalType": "address",
-          "name": "_aPID",
+          "name": "_aWHISKEY",
           "type": "address"
         },
         {
@@ -172,7 +172,7 @@
           "type": "uint256"
         }
       ],
-      "name": "purchaseaPID",
+      "name": "purchaseaWHISKEY",
       "outputs": [
         {
           "internalType": "bool",
@@ -220,11 +220,11 @@
       "inputs": [
         {
           "internalType": "address",
-          "name": "_sendaPIDTo",
+          "name": "_sendaWHISKEYTo",
           "type": "address"
         }
       ],
-      "name": "sendRemainingaPID",
+      "name": "sendRemainingaWHISKEY",
       "outputs": [
         {
           "internalType": "bool",
