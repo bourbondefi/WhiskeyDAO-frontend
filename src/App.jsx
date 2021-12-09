@@ -217,8 +217,8 @@ function App() {
               <Route path="/stake">
                 <Stake />
               </Route>
-               <Route exact path="/index.html">
-                <Redirect to="/stake" />
+              <Route exact path="/home">
+                <Redirect to="/" />
               </Route>
               <Route exact path="/">
                 <Home />
@@ -239,7 +239,6 @@ function App() {
                 })}
                 <ChooseBond />
               </Route>
-              <Route component={NotFound} />
             </Switch>
           </div>
         </div>
