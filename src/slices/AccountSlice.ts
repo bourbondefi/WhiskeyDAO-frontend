@@ -6,7 +6,7 @@ import { abi as sOHMv2 } from "../abi/sOhmv2.json";
 import { abi as fuseProxy } from "../abi/FuseProxy.json";
 import { abi as wsOHM } from "../abi/wsOHM.json";
 import IDOAbi from '../abi/ido.json'
-
+import multicall from '../helpers/multicall'
 import { setAll } from "../helpers";
 
 import { createAsyncThunk, createSelector, createSlice } from "@reduxjs/toolkit";

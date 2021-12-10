@@ -132,11 +132,11 @@ export const Web3ContextProvider: React.FC<{ children: ReactElement }> = ({ chil
     console.error(
       "You are switching networks",
       EnvHelper.getOtherChainID(),
-      otherChainID === EnvHelper.getOtherChainID() || otherChainID === 4,
+      otherChainID === EnvHelper.getOtherChainID() || otherChainID === 56,
     );
     if (chainID !== otherChainID) {
       console.warn("You are switching networks", EnvHelper.getOtherChainID());
-      if (otherChainID === EnvHelper.getOtherChainID() || otherChainID === 4) {
+      if (otherChainID === EnvHelper.getOtherChainID() || otherChainID === 56) {
         setChainID(otherChainID);
         otherChainID === EnvHelper.getOtherChainID() ? setUri(getMainnetURI()) : setUri(getTestnetURI());
         return true;
