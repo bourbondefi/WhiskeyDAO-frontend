@@ -77,7 +77,6 @@ const TokenSymbol: React.FC<BasisLogoProps> = ({ symbol, size = 50,msize=size })
   return (
     <ImgBox
       src={logosBySymbol[symbol] || symbol}
-      alt={`${symbol} Logo`}
       size={size}
       msize={msize}
     />
