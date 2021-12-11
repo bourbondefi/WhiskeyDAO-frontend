@@ -45,8 +45,8 @@ export const dai = new StableBond({
 
 export const eth = new CustomBond({
   name: "bnb",
-  displayName: "wBNB",
-  bondToken: "wBNB",
+  displayName: "WBNB",
+  bondToken: "WBNB",
   bondIconSvg: wETHImg,
   bondContractABI: EthBondContract,
   networkAddrs: {
@@ -73,7 +73,7 @@ export const eth = new CustomBond({
 export const ohm_dai = new LPBond({
   name: "WHISKEY-BUSD",
   displayName: "WHISKEY-BUSD LP",
-  bondToken: "PID-BUSD",
+  bondToken: "WHISKEY-BUSD",
   bondIconSvg: OhmDaiImg,
   bondContractABI: BondOhmDaiContract,
   reserveContract: ReserveOhmDaiContract,

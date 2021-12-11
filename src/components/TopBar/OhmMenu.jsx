@@ -119,11 +119,11 @@ function OhmMenu() {
                     <p>ADD TOKEN TO WALLET</p>
                     <Box display="flex" flexDirection="row" justifyContent="space-between">
                       <Button variant="contained" color="secondary" onClick={addTokenToWallet("WHISKEY", PID_ADDRESS)}>
-                        <TokenIcon size={32} symbol="PID"/>
+                        <TokenIcon size={32} symbol="WHISKEY"/>
                         <Typography variant="body1">WHISKEY</Typography>
                       </Button>
                       <Button variant="contained" color="secondary" onClick={addTokenToWallet("SCREWBALL", SPID_ADDRESS)}>
-                        <TokenIcon size={32} symbol="sPID"/> 
+                        <TokenIcon size={32} symbol="SCREWBALL"/> 
                         <Typography variant="body1">SCREWBALL</Typography>
                       </Button>
                       {/* <Button variant="contained" color="secondary" onClick={addTokenToWallet("33T", PT_TOKEN_ADDRESS)}>
