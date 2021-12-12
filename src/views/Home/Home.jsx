@@ -23,6 +23,7 @@ import { ReactComponent as Medium } from "../../assets/icons/medium.svg";
 import { ReactComponent as Twitter } from "../../assets/icons/twitter.svg";
 import { ReactComponent as Discord } from "../../assets/icons/discord.svg";
 import medium from '../../assets/ohm/med@2x.png';
+import discord from '../../assets/ohm/discord.png';
 import { FixedFormat } from "@ethersproject/bignumber";
 import styled from "styled-components";
 import PdImg from '../../assets/ohm/pd.png'
@@ -248,7 +249,7 @@ function Home() {
     <div className="bottomBor a">
       <a href="https://twitter.com/financebourbon" target="_blank" className="bottomImgs a2"><img src={img1_1} alt="" className="bottomImgs2" /></a>
       <a href="https://github.com/bourbondefi" target="_blank" className="bottomImgs a2"><img src={img1_2} alt="" className="bottomImgs2" /></a>
-      <a href="https://discord.gg/xjg7wdnUeT" target="_blank" className="bottomImgs a2"><img src={medium} alt="" className="bottomImgs2" /></a>
+      <a href="https://discord.gg/xjg7wdnUeT" target="_blank" className="bottomImgs a2"><img src={discord} alt="" className="bottomImgs2" /></a>
       <a href="https://t.me/bourbondao" target="_blank" className="bottomImgs a"><img src={img1_4} alt="" className="bottomImgs2" /></a>
       {/* <a href="https://discord.com/invite/hPRwxePEYV" target="_blank" className="bottomImgs a"><img src={DiscordImg} alt="" className="bottomImgs2" /></a> */}
     </div>
