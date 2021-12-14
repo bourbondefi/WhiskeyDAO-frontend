@@ -6,8 +6,8 @@ function BondLogo({ bond }) {
 
   // Need more space if its an LP token
   if (bond.isLP) {
-    viewBox = "0 0 64 32";
-    style = { height: "32px", width: "62px" };
+    viewBox = "0 0 72 48";
+    style = { height: "48px", width: "72px" };
   }
   // if(!bond.bondToken){
 
