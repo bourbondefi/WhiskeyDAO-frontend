@@ -129,15 +129,15 @@ export const frax = new StableBond({
 });
 
 export const lusd = new StableBond({
-  name: "lusd",
-  displayName: "LUSD",
-  bondToken: "LUSD",
+  name: "USDT",
+  displayName: "USDT",
+  bondToken: "USDT",
   bondIconSvg: LusdImg,
-  bondContractABI: LusdBondContract,
+  bondContractABI: DaiBondContract,
   networkAddrs: {
     [NetworkID.Mainnet]: {
-      bondAddress: "0x10C0f93f64e3C8D0a1b0f4B87d6155fd9e89D08D",
-      reserveAddress: "0x5f98805A4E8be255a32880FDeC7F6728C6568bA0",
+      bondAddress: "0x1972f90FeD66a94708970c9Fee89438A53ef763F",
+      reserveAddress: "0x55d398326f99059ff775485246999027b3197955",
     },
     [NetworkID.Testnet]: {
       bondAddress: "0x3aD02C4E4D1234590E87A1f9a73B8E0fd8CF8CCa",
@@ -197,7 +197,7 @@ export const pid_lusd = new LPBond({
 // Add new bonds to this array!!
 // export const allBonds = [dai, frax, eth, ohm_dai, ohm_frax, lusd, pid_lusd];
 
-export const allBonds = [dai,ohm_dai]
+export const allBonds = [dai,ohm_dai,lusd]
 // export const allBonds:LPBond[]=[]
 export const treasuryBalanceAll = async ( networkID: NetworkID, provider: StaticJsonRpcProvider) => {
   return (await Promise.all(allBonds.map(async (item) => {
