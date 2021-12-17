@@ -207,7 +207,7 @@ function TreasuryDashboard() {
                     />
                   </Typography>
                   <Typography variant="h5">
-                    {currentIndex ? trim(currentIndex, 2) + " SCREWBALL" : <Skeleton type="text" />}
+                    {currentIndex ? trim(currentIndex, 0) / 10000 + " SCREWBALL" : <Skeleton type="text" />}
                   </Typography>
                   {/* <Chart
                     type="stack"
@@ -218,7 +218,7 @@ function TreasuryDashboard() {
                       "treasuryWETHMarketValue",
                       "treasuryXsushiMarketValue",
                     ]}
-                    stopColor={[
+                    stopColor={
                       ["#F5AC37", "#EA9276"],
                       ["#768299", "#98B3E9"],
                       ["#DC30EB", "#EA98F1"],
