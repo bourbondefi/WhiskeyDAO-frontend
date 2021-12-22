@@ -222,7 +222,7 @@ function Stake() {
                         Current Index
                       </Typography>
                       <Typography variant="h4">
-                        {currentIndex ? <>{trim(currentIndex, 1)} WHISKEY</> : <Skeleton width="150px" />}
+                        {currentIndex ? <>{trim(currentIndex, 0) / 10000} WHISKEY</> : <Skeleton width="150px" />}
                       </Typography>
                     </div>
                   </Grid>
