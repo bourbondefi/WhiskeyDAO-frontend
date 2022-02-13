@@ -11,11 +11,11 @@ const externalUrls = [
   //   url: "",
   //   icon: <SvgIcon color="primary" component={ForumIcon} />,
   // },
-  //{
-  //  title: "Governance",
-  //  url: "https://pidao.gitbook.io/homepage/community/governance",
-  //  icon: <SvgIcon color="primary" component={GovIcon} />,
-  // },
+  {
+    title: "Bourbon Cake Tomb Fork",
+    url: "https://www.bourbondefi.com/",
+    icon: <SvgIcon color="primary" component={ForumIcon} />,
+   },
   {
     title: "Docs",
     url: "https://bourbondefi.gitbook.io/bourbon-finance/",
