@@ -166,7 +166,7 @@ export const ohm_frax = new LPBond({
     },
   },
   lpUrl:
-    "https://app.uniswap.org/#/add/v2/0x853d955acef822db058eb8505911ed77f175b99e/0x383518188c0c6d7730d91b2c03a03c837814a899",
+    "https://pancakeswap.finance/add/BNB/0x37c3205E81D44770d6b9E5693094264C6aA4d6E1",
 });
 
 export const pid_lusd = new LPBond({
