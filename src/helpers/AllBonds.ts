@@ -149,16 +149,16 @@ export const lusd = new StableBond({
 
 
 export const ohm_frax = new LPBond({
-  name: "ohm_frax_lp",
-  displayName: "OHM-FRAX LP",
-  bondToken: "FRAX",
+  name: "BSHARE-BNB",
+  displayName: "BSHARE-BNB LP",
+  bondToken: "BSHARE-BNB",
   bondIconSvg: OhmFraxImg,
-  bondContractABI: FraxOhmBondContract,
+  bondContractABI: BondOhmDaiContract,
   reserveContract: ReserveOhmFraxContract,
   networkAddrs: {
     [NetworkID.Mainnet]: {
-      bondAddress: "0xc20CffF07076858a7e642E396180EC390E5A02f7",
-      reserveAddress: "0x2dce0dda1c2f98e0f171de8333c3c6fe1bbf4877",
+      bondAddress: "0x3bF6A4943B8d43446D258E2800e30D6a880eA71A",
+      reserveAddress: "0x23f882C3b2B7a8F5df94BaCb6386D5eB3250880f",
     },
     [NetworkID.Testnet]: {
       bondAddress: "0x7BB53Ef5088AEF2Bb073D9C01DCa3a1D484FD1d2",
@@ -197,7 +197,7 @@ export const pid_lusd = new LPBond({
 // Add new bonds to this array!!
 // export const allBonds = [dai, frax, eth, ohm_dai, ohm_frax, lusd, pid_lusd];
 
-export const allBonds = [dai,ohm_dai,lusd,eth]
+export const allBonds = [dai,ohm_dai,lusd,eth,ohm_frax]
 // export const allBonds:LPBond[]=[]
 export const treasuryBalanceAll = async ( networkID: NetworkID, provider: StaticJsonRpcProvider) => {
   return (await Promise.all(allBonds.map(async (item) => {
