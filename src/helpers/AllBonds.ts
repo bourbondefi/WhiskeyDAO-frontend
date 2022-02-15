@@ -70,6 +70,33 @@ export const eth = new CustomBond({
   },
 });
 
+export const bourboncake = new CustomBond({
+  name: "BOURBONCAKE",
+  displayName: "BOURBONCAKE",
+  bondToken: "BOURBONCAKE",
+  bondIconSvg: FraxImg,
+  bondContractABI: FraxBondContract,
+  networkAddrs: {
+    [NetworkID.Mainnet]: {
+      bondAddress: "0x43B09D0d25836c915D75141427DCcd68A82202D3",
+      reserveAddress: "0x7D57D8D48059829F52Db6De53190618f67AAe32b",
+    },
+    [NetworkID.Testnet]: {
+      bondAddress: "0xca7b90f8158A4FAA606952c023596EE6d322bcf0",
+      reserveAddress: "0xc778417e063141139fce010982780140aa0cd5ab",
+    },
+  },
+  customTreasuryBalanceFunc: async function (this: CustomBond, networkID, provider) {
+    const FraxBondContract = this.getContractForBond(networkID, provider);
+    let bourboncakePrice = await FraxBondContract.assetPrice();
+    bourboncakePrice = bourboncakePrice / Math.pow(10, 8);
+    const token = this.getContractForReserve(networkID, provider);
+    let bourboncakeAmount = await token.balanceOf(addresses[networkID].TREASURY_ADDRESS);
+    bourboncakeAmount = bourboncakeAmount / Math.pow(10, 18);
+    return bourboncakeAmount * bourboncakePrice;
+  },
+});
+
 export const ohm_dai = new LPBond({
   name: "WHISKEY-BUSD",
   displayName: "WHISKEY-BUSD LP",
@@ -90,26 +117,7 @@ export const ohm_dai = new LPBond({
   lpUrl:
    `https://pancakeswap.finance/add/${addresses[NetworkID.Mainnet].DAI_ADDRESS}/${addresses[NetworkID.Mainnet].PID_ADDRESS}`,
 });
-export const ohm_eth = new LPBond({
-  name: "WHISKEY-BNB",
-  displayName: "WHISKEY-BNB LP",
-  bondToken: "WHISKEY-BNB",
-  bondIconSvg: OhmDaiImg,
-  bondContractABI: BondOhmDaiContract,
-  reserveContract: ReserveOhmDaiContract,
-  networkAddrs: {
-    [NetworkID.Mainnet]: {
-      bondAddress: "0x7F1b0Dab5C7c8d7a63758946f853049bC53f4306",
-      reserveAddress: "0x96b6d5482313eECC031aFEb2Fb32da2BA7439BA2",
-    },
-    [NetworkID.Testnet]: {
-      bondAddress: "0xcF449dA417cC36009a1C6FbA78918c31594B9377",
-      reserveAddress: "0x8D5a22Fb6A1840da602E56D1a260E56770e0bCE2",
-    },
-  },
-  lpUrl:
-   `https://pancakeswap.finance/add/${addresses[NetworkID.Mainnet].BNB_ADDRESS}/${addresses[NetworkID.Mainnet].PID_ADDRESS}`,
-});
+
 export const frax = new StableBond({
   name: "frax",
   displayName: "FRAX",
@@ -174,11 +182,11 @@ export const pid_lusd = new LPBond({
   displayName: "OHM-LUSD LP",
   bondToken: "LUSD",
   bondIconSvg: OhmLusdImg,
-  bondContractABI: BondOhmLusdContract,
+  bondContractABI: BondOhmDaiContract,
   reserveContract: ReserveOhmLusdContract,
   networkAddrs: {
     [NetworkID.Mainnet]: {
-      bondAddress: "0xFB1776299E7804DD8016303Df9c07a65c80F67b6",
+      bondAddress: "0x43B09D0d25836c915D75141427DCcd68A82202D3",
       reserveAddress: "0xfDf12D1F85b5082877A6E070524f50F6c84FAa6b",
     },
     [NetworkID.Testnet]: {
@@ -197,7 +205,7 @@ export const pid_lusd = new LPBond({
 // Add new bonds to this array!!
 // export const allBonds = [dai, frax, eth, ohm_dai, ohm_frax, lusd, pid_lusd];
 
-export const allBonds = [dai,ohm_dai,lusd,eth,ohm_frax]
+export const allBonds = [dai,ohm_dai,lusd,eth,ohm_frax,bourboncake]
 // export const allBonds:LPBond[]=[]
 export const treasuryBalanceAll = async ( networkID: NetworkID, provider: StaticJsonRpcProvider) => {
   return (await Promise.all(allBonds.map(async (item) => {

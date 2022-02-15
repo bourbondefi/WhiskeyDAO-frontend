@@ -28,6 +28,7 @@ import USDCLogo from '../../assets/tokensymbol/USDC@2x.png'
 import WHISKEYLogo from '../../assets/iconpid.png'
 import SCREWBALLLogo from '../../assets/iconspid.png'
 import BSHARELogo from '../../assets/bomb2.png'
+import BOURBONCAKELogo from '../../assets/bomb1.png'
 
 import LpTokenSymbol from './LpTokenSymbol';
 
@@ -58,7 +59,8 @@ export const logosBySymbol: {[title: string]: string} = {
   "VAI":VAILogo,
   "TUSD":TUSDLogo,
   'MOBOX':MOBOXLogo,
-  'BSHARE':BSHARELogo
+  'BSHARE':BSHARELogo,
+  'BOURBONCAKE':BOURBONCAKELogo
 };
 
 type BasisLogoProps = {
