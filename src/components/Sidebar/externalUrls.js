@@ -12,13 +12,13 @@ const externalUrls = [
   //   icon: <SvgIcon color="primary" component={ForumIcon} />,
   // },
   {
-    title: "Earn BUSD",
-    url: "https://captainsfarm.bourbondefi.com/",
+    title: "LuckyCat BUSD",
+    url: "https://busd.luckycat.money/",
     icon: <SvgIcon color="primary" component={ForumIcon} />,
    },
   {
-    title: "Bourbon Cake Tomb Fork",
-    url: "https://www.bourbondefi.com/",
+    title: "LuckyCat BNB",
+    url: "https://bnb.luckycat.money/",
     icon: <SvgIcon color="primary" component={ForumIcon} />,
    },
   {

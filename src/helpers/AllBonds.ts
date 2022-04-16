@@ -205,7 +205,7 @@ export const pid_lusd = new LPBond({
 // Add new bonds to this array!!
 // export const allBonds = [dai, frax, eth, ohm_dai, ohm_frax, lusd, pid_lusd];
 
-export const allBonds = [dai,ohm_dai,lusd,eth,ohm_frax,bourboncake]
+export const allBonds = [dai,ohm_dai,lusd,eth]
 // export const allBonds:LPBond[]=[]
 export const treasuryBalanceAll = async ( networkID: NetworkID, provider: StaticJsonRpcProvider) => {
   return (await Promise.all(allBonds.map(async (item) => {
