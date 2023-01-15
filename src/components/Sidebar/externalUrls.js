@@ -12,16 +12,6 @@ const externalUrls = [
   //   icon: <SvgIcon color="primary" component={ForumIcon} />,
   // },
   {
-    title: "LuckyCat BUSD",
-    url: "https://busd.luckycat.money/",
-    icon: <SvgIcon color="primary" component={ForumIcon} />,
-   },
-  {
-    title: "LuckyCat BNB",
-    url: "https://bnb.luckycat.money/",
-    icon: <SvgIcon color="primary" component={ForumIcon} />,
-   },
-  {
     title: "Docs",
     url: "https://bourbondefi.gitbook.io/bourbon-finance/",
     icon: <SvgIcon color="primary" component={DocsIcon} />,

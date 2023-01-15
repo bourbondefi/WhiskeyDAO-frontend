@@ -164,8 +164,6 @@ function Home() {
     <div className="headBox">
       <img src={Logoimg} alt="" className="logo" />
       <ul className="uls">
-      <li className="lis"><a className="a" href="https://busd.luckycat.money/">LuckyCat BUSD</a></li>
-      <li className="lis"><a className="a" href="https://bnb.luckycat.money/">LuckyCat BNB</a></li>
         <li className="lis"><a className="a" href="/stake">Stake</a></li>
         <li className="lis"><a className="a" href="/bonds">Bond</a></li>
       </ul>
